@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback values; useTheme sets these on <html> and GSAP tweens them. */
+:root { --bg:#0e100f; --fg:#fffce1; --muted:#9c9d90; --card:#181a19; --line:#2a2d2b; --accent:#88ce02; }
+html { scroll-behavior: smooth; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body { @apply bg-bg text-fg font-body antialiased; margin: 0; }
+.h-char { font-variation-settings: "wght" var(--w, 600); }
+.clip { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
